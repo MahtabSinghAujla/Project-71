@@ -56,7 +56,7 @@ export default class RideScreen extends Component {
       .get()
       .then(doc => {
         var bike = doc.data();
-        if (bike.assigned) {
+        if (bike.is_bike_available) {
           this.assignBike();
         } else {
           this.initiateBookReturn();
